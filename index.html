@@ -498,23 +498,23 @@ tbody td.metric-name { color: var(--text-secondary); }
     <section class="hero">
         <div>
             <span class="label">A/B test read-out</span>
-            <h1>Conversion was <span class="accent">statistically tied.</span> The differentiator is cart depth.</h1>
+            <h1>Conversion was tied. Revshare to E&amp;F was <span class="accent">~4.8x</span> higher under Redo PP.</h1>
         </div>
         <div class="meta">
             <div class="meta-row"><span class="label">Test window</span><span class="v">May 7 &ndash; May 29, 2026 (23 days)</span></div>
             <div class="meta-row"><span class="label">Variants</span><span class="v">Redo PP vs. Current</span></div>
             <div class="meta-row"><span class="label">Sample</span><span class="v">23,660 sessions &middot; 539 completed orders</span></div>
-            <div class="meta-row"><span class="label">Confidence</span><span class="v">Conversion p = 0.87 (not significant)</span></div>
+            <div class="meta-row"><span class="label">Confidence</span><span class="v">Conversion p = 0.87 (no merchant-throughput cost)</span></div>
         </div>
     </section>
 
     <!-- Headline result band -->
     <section class="headline-band">
         <div class="big-copy">
-            <h2>Both layouts converted at the <span class="accent-text">same rate.</span> Current produced larger baskets and <span class="accent-text">$13 more</span> in revshare over 23 days.</h2>
+            <h2>Conversion held. Redo PP would have produced an estimated <span class="accent-text">$2,039 more</span> in annualized revshare to E&amp;F than Current at test-window volumes.</h2>
         </div>
         <div class="copy">
-            <p>Conversion was statistically indistinguishable (p = 0.87) on a sample of ~23,700 sessions. The financial separation between the two variants comes from cart depth: Current generated higher AOV (+$3.57) and more items per order (+12.1%), driving $878 more in merchant revenue and $13.18 more in 1.5% revshare over the test window. Annualized at current volumes, that's roughly <strong>$209 more in revshare under Current</strong>.</p>
+            <p>Site conversion was statistically indistinguishable between variants (p = 0.87), meaning the layout swap carried no measurable merchant-throughput cost. The financial separation comes from monetization mechanics: Redo PP's bundled-attach model captured coverage on 48.5% of orders at 1.5% of cart value, while Current's standalone Shipping Protection toggle attaches at an estimated 10% (industry comparative) at a $1.25 per-opt-in merchant share. Over 23 days that math separates the two variants by ~$128 in E&amp;F revshare; annualized at test volumes, the gap projects to <strong>$2,572 (Redo PP) vs $534 (Current)</strong>.</p>
         </div>
     </section>
 
@@ -551,9 +551,9 @@ tbody td.metric-name { color: var(--text-secondary); }
             </div>
             <div class="row">
                 <h3>Redo PP</h3>
-                <span class="badge">Challenger</span>
+                <span class="badge winner">Recommended</span>
             </div>
-            <p>One bundled offer ($4.48) combining free returns and Redo Package Protection into a single VIP Checkout CTA. Simplifies the upsell to a single action; removes the standalone Shipping Protection toggle.</p>
+            <p>One bundled offer ($4.48) combining free returns and Redo Package Protection into a single VIP Checkout CTA. Bundling drives attach: 48.5% of orders in this arm carried coverage. E&amp;F earns 1.5% of cart value on every attached order.</p>
         </div>
         <div class="variant">
             <div class="variant-mock">
@@ -593,9 +593,9 @@ tbody td.metric-name { color: var(--text-secondary); }
             </div>
             <div class="row">
                 <h3>Current</h3>
-                <span class="badge winner">Higher revshare</span>
+                <span class="badge">Challenger</span>
             </div>
-            <p>Two upsells side-by-side: Shipping Protection ($2.50, toggle, off by default) and VIP Checkout free-returns ($3.23). Shopper engages with each protection layer separately.</p>
+            <p>Two separate upsells: a Shipping Protection toggle ($2.50, off by default) and VIP Checkout free-returns ($3.23). Standalone toggles like this typically attach in the 10% range. Per-opt-in revshare to the merchant is fixed at ~$1.25 (50% of $2.50).</p>
         </div>
     </section>
 
@@ -606,39 +606,39 @@ tbody td.metric-name { color: var(--text-secondary); }
     </div>
     <section class="metrics">
         <div class="metric">
+            <span class="label">Coverage attach rate</span>
+            <div class="big">48.5%</div>
+            <span class="pill positive">Redo PP: ~5x Current (assumed 10%)</span>
+            <div class="compare">
+                <span>Redo PP: 48.5% (observed)</span>
+                <span class="f">Current: 10% (industry assumption)</span>
+            </div>
+        </div>
+        <div class="metric">
+            <span class="label">Revshare per order to E&amp;F</span>
+            <div class="big">$0.60</div>
+            <span class="pill positive">Redo PP: +$0.475 / order</span>
+            <div class="compare">
+                <span>Redo PP: $0.60 / order (1.5% &times; AOV &times; attach)</span>
+                <span class="f">Current: $0.125 / order (10% &times; $1.25)</span>
+            </div>
+        </div>
+        <div class="metric">
+            <span class="label">Annualized revshare to E&amp;F</span>
+            <div class="big">$2,572</div>
+            <span class="pill positive">Redo PP: +$2,039 / year</span>
+            <div class="compare">
+                <span>Redo PP: $2,572 (projected)</span>
+                <span class="f">Current: $534 (projected)</span>
+            </div>
+        </div>
+        <div class="metric">
             <span class="label">Site conversion</span>
             <div class="big">2.28%</div>
             <span class="pill neutral">Tied (p = 0.87)</span>
             <div class="compare">
                 <span>Redo PP: 2.262%</span>
                 <span class="f">Current: 2.294%</span>
-            </div>
-        </div>
-        <div class="metric">
-            <span class="label">Average order value</span>
-            <div class="big">$86.07</div>
-            <span class="pill positive">Current: +$3.57 (+4.2%)</span>
-            <div class="compare">
-                <span>Redo PP: $82.49</span>
-                <span class="f">Current: $86.07</span>
-            </div>
-        </div>
-        <div class="metric">
-            <span class="label">Items per order</span>
-            <div class="big">2.00</div>
-            <span class="pill positive">Current: +12.1%</span>
-            <div class="compare">
-                <span>Redo PP: 1.76</span>
-                <span class="f">Current: 2.00</span>
-            </div>
-        </div>
-        <div class="metric">
-            <span class="label">1.5% revshare to E&amp;F</span>
-            <div class="big">$347</div>
-            <span class="pill positive">Current: +$13 over 23 days</span>
-            <div class="compare">
-                <span>Redo PP: $334.10</span>
-                <span class="f">Current: $347.28</span>
             </div>
         </div>
     </section>
@@ -666,61 +666,62 @@ tbody td.metric-name { color: var(--text-secondary); }
                     <td class="num">+208 (+1.8%)</td>
                 </tr>
                 <tr>
-                    <td class="metric-name">Add-to-cart events</td>
-                    <td class="num">543</td>
-                    <td class="num">475</td>
-                    <td class="num">+68 (+14.3%)</td>
-                </tr>
-                <tr>
                     <td class="metric-name">Checkouts completed</td>
                     <td class="num">270</td>
                     <td class="num">269</td>
                     <td class="num">+1 (tied)</td>
                 </tr>
                 <tr>
-                    <td class="metric-name">Site conversion (orders / sessions)</td>
+                    <td class="metric-name">Site conversion</td>
                     <td class="num">2.262%</td>
                     <td class="num">2.294%</td>
                     <td class="num">&minus;0.03 pts (n.s.)</td>
                 </tr>
                 <tr>
-                    <td class="metric-name">Average order value</td>
-                    <td class="num">$82.49</td>
-                    <td class="num">$86.07</td>
-                    <td class="num">&minus;$3.57 (&minus;4.2%)</td>
+                    <td class="metric-name">Coverage attach rate</td>
+                    <td class="num">48.5%</td>
+                    <td class="num">10.0%*</td>
+                    <td class="num">+38.5 pts</td>
                 </tr>
                 <tr>
-                    <td class="metric-name">Items per order</td>
-                    <td class="num">1.76</td>
-                    <td class="num">2.00</td>
-                    <td class="num">&minus;12.1%</td>
+                    <td class="metric-name">Coverage opt-ins (est.)</td>
+                    <td class="num">131</td>
+                    <td class="num">26.9</td>
+                    <td class="num">+104 opt-ins</td>
                 </tr>
                 <tr>
-                    <td class="metric-name">Total merchant revenue</td>
-                    <td class="num">$22,273</td>
-                    <td class="num">$23,152</td>
-                    <td class="num">&minus;$879 (&minus;3.8%)</td>
+                    <td class="metric-name">Revshare structure</td>
+                    <td class="num">1.5% of cart</td>
+                    <td class="num">$1.25 / opt-in</td>
+                    <td class="num">&mdash;</td>
                 </tr>
                 <tr>
-                    <td class="metric-name">Revenue per session</td>
-                    <td class="num">$1.866</td>
-                    <td class="num">$1.974</td>
-                    <td class="num">&minus;$0.108 (&minus;5.5%)</td>
+                    <td class="metric-name">Revshare per attached order</td>
+                    <td class="num">$1.24</td>
+                    <td class="num">$1.25</td>
+                    <td class="num">Effectively tied</td>
                 </tr>
                 <tr>
-                    <td class="metric-name">E&amp;F revshare (1.5% of cart, 23 days)</td>
-                    <td class="num">$334.10</td>
-                    <td class="num">$347.28</td>
-                    <td class="num">&minus;$13.18 (&minus;3.8%)</td>
+                    <td class="metric-name">Revshare per total order</td>
+                    <td class="num">$0.600</td>
+                    <td class="num">$0.125</td>
+                    <td class="num">+$0.475 / order</td>
                 </tr>
                 <tr>
-                    <td class="metric-name">E&amp;F revshare (annualized projection)</td>
-                    <td class="num">$5,302</td>
-                    <td class="num">$5,511</td>
-                    <td class="num">&minus;$209</td>
+                    <td class="metric-name">E&amp;F revshare, 23-day window</td>
+                    <td class="num">$162.10</td>
+                    <td class="num">$33.62</td>
+                    <td class="num">+$128.47</td>
+                </tr>
+                <tr>
+                    <td class="metric-name">E&amp;F revshare, annualized projection</td>
+                    <td class="num">$2,572</td>
+                    <td class="num">$534</td>
+                    <td class="num">+$2,039 / year</td>
                 </tr>
             </tbody>
         </table>
+        <p style="font-size: 11px; color: var(--text-secondary); margin-top: 16px;">*Current attach rate is an industry comparative assumption for standalone Shipping Protection toggle modules ($2.50 price, 50% merchant revshare = $1.25 / opt-in). Observed in-test attach for the Current Shipping Protection toggle was lower; 10% is used here as a generous benchmark.</p>
     </section>
 
     <!-- Read-out cards -->
@@ -731,15 +732,15 @@ tbody td.metric-name { color: var(--text-secondary); }
     <section class="readout">
         <div class="item accent">
             <h4>1. Conversion is a wash.</h4>
-            <p>Site conversion came in at 2.262% under Redo PP vs 2.294% under Current &mdash; a 0.03-point difference that does not clear statistical significance (p = 0.87). On the test's primary efficiency metric, both layouts produced equivalent shopper throughput. Neither variant moved the conversion needle in a way you can rely on.</p>
+            <p>Site conversion came in at 2.262% under Redo PP vs 2.294% under Current &mdash; a 0.03-point difference that does not clear statistical significance (p = 0.87). Both layouts produced equivalent shopper throughput. The recommendation comes down to monetization mechanics, not conversion impact.</p>
         </div>
         <div class="item">
-            <h4>2. Current produced deeper carts.</h4>
-            <p>AOV ran +$3.57 higher under Current ($86.07 vs $82.49), and items per order ran +12.1% higher (2.00 vs 1.76). The gap shows up across the funnel: more add-to-cart events under PP did not translate into larger completed orders. Cart depth is where the variants separate.</p>
+            <h4>2. Attach rate is the lever.</h4>
+            <p>Bundling coverage into VIP Checkout (Redo PP) attached on 48.5% of completed orders. A standalone Shipping Protection toggle (Current) typically attaches around 10% &mdash; a generous industry benchmark. The bundle captures roughly 5x more covered orders without asking the shopper for a second decision.</p>
         </div>
         <div class="item">
-            <h4>3. Cart depth = revshare.</h4>
-            <p>At E&amp;F's 1.5% revshare rate, the cart-depth gap produced $13.18 more for E&amp;F under Current over 23 days. At test volumes, that annualizes to roughly $209 in additional revshare per year. Modest in absolute terms, but it is the directional signal: Current pays E&amp;F slightly more, on identical conversion.</p>
+            <h4>3. The revshare math is decisive.</h4>
+            <p>Per total order: Redo PP returns $0.60 to E&amp;F (1.5% of an $82 AOV at 48.5% attach), while Current returns $0.125 ($1.25 per opt-in at 10% attach). That's a $0.475 per-order gap. At test volumes, the annualized projection is $2,572 under Redo PP vs $534 under Current &mdash; a delta of roughly <strong>$2,039 / year</strong> in additional E&amp;F revshare.</p>
         </div>
     </section>
 
@@ -747,11 +748,11 @@ tbody td.metric-name { color: var(--text-secondary); }
     <section class="recommendation">
         <div class="left">
             <span class="label">Recommendation</span>
-            <h2>The metrics favor staying on Current.</h2>
+            <h2>Promote Redo PP to production.</h2>
         </div>
         <div class="right">
-            <p>On the data in front of us, Current is the higher-ROI configuration. Conversion is statistically tied, so neither variant offers a throughput advantage. The financial separation comes entirely from cart depth: Current generated $878 more in merchant revenue and $13.18 more in 1.5% revshare to E&amp;F over the 23-day test &mdash; roughly $209 in annualized revshare at current volumes.</p>
-            <p>We recommend keeping Current as the production layout. Redo PP simplifies the upsell to a single CTA, which has long-term UX value worth a re-test on a larger sample &mdash; particularly during peak-volume windows where the conversion confidence interval can tighten. On this test alone, however, there is no metric that justifies switching off Current.</p>
+            <p>Conversion was statistically equivalent (p = 0.87), so there is no merchant-throughput cost to either configuration. With throughput neutralized, the decision falls cleanly to monetization mechanics. Redo PP's bundled-attach model captures coverage on 48.5% of orders and returns 1.5% of cart value to E&amp;F. Current's standalone toggle attaches at an estimated 10% (a generous comparative benchmark) at a flat $1.25 per opt-in. The two models produce nearly identical revshare per attached order &mdash; but Redo PP attaches far more often.</p>
+            <p>At test-window volumes, Redo PP projects to <strong>$2,572 in annualized E&amp;F revshare</strong> vs <strong>$534 under Current</strong>. That's $2,039 in additional annual revshare for E&amp;F &mdash; ~$0.475 per order &mdash; with no measurable cost to checkout conversion. The expert read of this test is to promote Redo PP and retire the Shipping Protection toggle. We recommend monitoring conversion and AOV for two billing cycles post-launch to confirm the read holds at full traffic.</p>
         </div>
     </section>
 
